@@ -7,7 +7,7 @@ public class CheakAlphabet {
         if (ch>='A' && ch<='Z') {
             System.out.println(1);
         }
-         else if (ch>='a' && ch>='b') {
+         else if (ch>='a' && ch>='z') {
             System.out.println(0);
         }
          else {
