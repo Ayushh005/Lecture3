@@ -14,5 +14,7 @@ public class BMI {
         System.out.println("Hello Sir...");
         System.out.println(" your BMI is "+BMI);
 
+
+
     }
 }
