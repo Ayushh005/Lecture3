@@ -2,11 +2,12 @@ import java.util.Scanner;
 public class BMI {
     public static void main(String[] args) {
         Scanner s = new Scanner (System.in);
-
-        System.out.println("Height=");
+        System.out.print("Name=");
+        char c = s.next().charAt(2);
+        System.out.print("Height=");
         double h = s.nextDouble();
         double ht = h/100;
-        System.out.println("Weight=");
+        System.out.print("Weight=");
         double w = s.nextDouble();
 
         double BMI = w/(ht*ht);
