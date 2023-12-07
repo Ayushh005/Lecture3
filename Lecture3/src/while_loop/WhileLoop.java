@@ -8,7 +8,7 @@ public class WhileLoop {
         System.out.print("Enter an Integer =");
         int n = s.nextInt();
         int i = 1;
-        while(i<=n) {
+        while(i<=10) {
             System.out.println(i);
             i = i + 1;
         }
