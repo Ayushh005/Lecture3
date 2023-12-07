@@ -3,7 +3,7 @@ public class BMI {
     public static void main(String[] args) {
         Scanner s = new Scanner (System.in);
         System.out.print("Name=");
-        char c = s.next().charAt(2);
+        char name = s.next().charAt(0);
         System.out.print("Height=");
         double h = s.nextDouble();
         double ht = h/100;
@@ -11,7 +11,8 @@ public class BMI {
         double w = s.nextDouble();
 
         double BMI = w/(ht*ht);
-        System.out.println("BMI="+BMI);
+        System.out.println("Hello Sir...");
+        System.out.println(" your BMI is "+BMI);
 
     }
 }
