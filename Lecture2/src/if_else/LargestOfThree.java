@@ -2,6 +2,7 @@ package if_else;
 import java.util.Scanner;
 public class LargestOfThree {
     public static void main(String[] args) {
+        System.out.println("Enter an 3 different Integer = ");
         Scanner sc = new Scanner(System.in);
         int a = sc.nextInt();
         int b = sc.nextInt();
