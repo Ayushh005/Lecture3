@@ -3,6 +3,7 @@ import java.util.Scanner;
 
 public class WhileLoop {
     public static void main(String[] args) {
+        System.out.print("Integer = ");
         Scanner s = new Scanner(System.in);
         int n  = s.nextInt();
         int i = 1;
