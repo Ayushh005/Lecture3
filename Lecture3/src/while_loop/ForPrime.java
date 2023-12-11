@@ -6,13 +6,13 @@ public class ForPrime {
         Scanner s = new Scanner(System.in);
         int n = s.nextInt();
 
-        for (int i=2;i<=n-1;i++) {
-            if (n%i==0) {
+        for (int d=2;d<=n-1;d++) {
+            if (n%d==0) {
                 System.out.println(n+" is not Prime");
+                return;
             }
-            else {
                 System.out.println(n+" is Prime");
-            }
+                return;
         }
     }
 }
