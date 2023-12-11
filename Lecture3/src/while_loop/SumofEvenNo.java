@@ -2,7 +2,7 @@ package while_loop;
 import java.util.Scanner;
 public class SumofEvenNo {
     public static void main(String[] args) {
-        System.out.println("som of even no.");
+        System.out.println("sum of even no.");
         System.out.print("Enter an Integer = ");
         Scanner s = new Scanner(System.in);
         int n = s.nextInt();
