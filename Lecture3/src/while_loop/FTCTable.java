@@ -10,7 +10,7 @@ public class FTCTable {
         System.out.print("Enter Step Size between them = ");
         int Step = sc.nextInt();
 
-
+        System.out.println("F" + "\t" + "C");
         int FTC = Start;
         while (FTC <= End) {
             int cel = (int)((5.0/9) * (FTC - 32));
