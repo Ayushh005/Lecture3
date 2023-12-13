@@ -1,7 +1,7 @@
 import java.util.Scanner;
 public class BMI {
     public static void main(String[] args) {
-        System.out.println("change by github);
+        System.out.println("change by github");
         Scanner s = new Scanner (System.in);
         System.out.print("Name=");
         String name = s.next();
