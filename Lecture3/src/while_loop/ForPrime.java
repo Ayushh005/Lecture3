@@ -14,5 +14,6 @@ public class ForPrime {
                 System.out.println(n+" is Prime");
                 return;
         }
+
     }
 }
