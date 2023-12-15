@@ -2,6 +2,7 @@ package Patterns;
 import java.util.Scanner;
 public class Pattern3 {
     public static void main(String[] args) {
+        System.out.print("Enter size of Pattern = ");
         Scanner s = new Scanner(System.in);
         int n = s.nextInt();
 
