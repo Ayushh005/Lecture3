@@ -24,4 +24,11 @@ public class InvertedTriangle {
             i++;
         }
     }
+//        ****
+//        ***
+//        **
+//        *
+
+
+
 }
