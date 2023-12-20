@@ -5,15 +5,19 @@ public class ForPrime {
         System.out.print("Enter an Integer = ");
         Scanner s = new Scanner(System.in);
         int n = s.nextInt();
+        boolean divided = false;
 
-        for (int d=2;d<=n-1;d++) {
+        for (int d=2;d<n;d++) {
             if (n%d==0) {
-                System.out.println(n+" is not Prime");
-                return;
+                divided = true;
+                break;
             }
-                System.out.println(n+" is Prime");
-                return;
         }
-
+        if (divided) {
+            System.out.println(n+" is not prime");
+        }
+        else {
+            System.out.println(n+" is prime");
+        }
     }
 }
