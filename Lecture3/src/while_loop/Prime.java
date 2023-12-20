@@ -7,7 +7,7 @@ public class Prime {
         int n = s.nextInt();
 
         int d = 2;
-        while(d<=n-1) {
+        while(d<n) {
             if (n % d == 0) {
                 System.out.println(n + " is not Prime.");
                 return;
