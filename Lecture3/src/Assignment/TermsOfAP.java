@@ -12,7 +12,7 @@ public class TermsOfAP {
         while (count<=n) {
             int num = 3 * current + 2;
             if (num%4 != 0) {
-                System.out.println(num + " ");
+                System.out.print(num + " ");
                 count++;
             }
             current++;
