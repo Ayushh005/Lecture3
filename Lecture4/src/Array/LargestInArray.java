@@ -33,6 +33,7 @@ public class LargestInArray {
     public static void main(String[] args) {
         System.out.println("Enter size of Array = ");
         int arr[] = input();
+        System.out.println("Enter element of array = ");
         Print(arr);
         int largest = largest(arr);
         System.out.println("Largest element = "+ largest);
