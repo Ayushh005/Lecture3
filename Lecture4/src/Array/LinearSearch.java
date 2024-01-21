@@ -4,30 +4,30 @@ import java.util.Scanner;
 
 public class LinearSearch {
 
-    public static int LinearSearch(int[] input,int val) {
-        for (int i=0;i<= input.length;i++) {
-            if (input[i]==val) {
+    public static int LinearSearch(int[] arr,int x) {
+        for (int i=0;i<= arr.length;i++) {
+            if (arr[i]==x) {
                 return i;
             }
         }
         return -1;
     }
     public static void main(String[] args) {
-        Scanner s = new Scanner(System.in);
-        System.out.println("Enter number of Array : ");
-        int t = s.nextInt();
-            for (int j = 0;j<= t; t++) {
-                System.out.println("Enter size of an Array : ");
-                int size = s.nextInt();
-                System.out.println("Enter Element of Array : ");
-                int input[] = new int[size];
-                for (int i = 0; i < size; i++) {
-                input[i] = s.nextInt();
+        Scanner scanner = new Scanner(System.in);
+        int t = scanner.nextInt(); // Number of test cases
+
+        for (int i = 0; i < t; i++) {
+            int n = scanner.nextInt(); // Size of the array
+            int[] arr = new int[n];
+
+            for (int j = 0; j < n; j++) {
+                arr[j] = scanner.nextInt(); // Read array elements
             }
-            System.out.println("Enter the value you Search : ");
-            int val = s.nextInt();
+
+            int x = scanner.nextInt(); // Value to search for
+
+            int result = LinearSearch(arr,x);
+            System.out.println(result); // Print the result
         }
-         int result = LinearSearch(int input,val);
-        System.out.println(result);
     }
 }
