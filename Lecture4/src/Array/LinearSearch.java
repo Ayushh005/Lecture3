@@ -15,7 +15,7 @@ public class LinearSearch {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         int t = scanner.nextInt(); // Number of test cases
-        for (int i = 0; i < t; i++) {
+        for (int i = 0; i <= t; i++) {
             int n = scanner.nextInt(); // Size of the array
             int[] arr = new int[n];
             for (int j = 0; j < n; j++) {
