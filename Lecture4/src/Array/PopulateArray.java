@@ -1,18 +1,22 @@
 package Array;
 
+
 import java.util.Scanner;
 
 public class PopulateArray {
-    public static void main(String[] args) {
-
+    public static int[] input() {
         Scanner s = new Scanner(System.in);
         int size = s.nextInt();
         int input[] = new int[size];
+        return input;
+    }
 
+    public static void arrange(int[] input) {
+        int size = input.length; // Use the length of the provided array
         int left = 0;
-        int right = size-1;
+        int right = size - 1;
         int counter = 1;
-        while (left<=right) {
+        while (left <= right) {
             if (counter % 2 == 0) {
                 input[left] = counter;
                 counter += 1;
@@ -23,10 +27,14 @@ public class PopulateArray {
                 right -= 1;
             }
         }
-
-        for (int i=0;i<input.length;i++){
-            System.out.print(input[i]+" ");
+        for (int i = 0; i < input.length; i++) {
+            System.out.print(input[i] + " "); // Use the provided array, not input()
         }
         System.out.println();
+    }
+
+    public static void main(String[] args) {
+        int arr[] = input();
+        arrange(arr);
     }
 }
