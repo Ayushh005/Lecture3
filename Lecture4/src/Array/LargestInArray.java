@@ -3,15 +3,6 @@ package Array;
 import java.util.Scanner;
 
 public class LargestInArray {
-    public static int largest(int input[]) {
-        int max = Integer.MIN_VALUE;
-        for (int i = 0; i < input.length ; i++) {
-            if (input[i] > max) {
-                max = input[i];
-            }
-        }
-        return max;
-    }
 
     public static int [] input() {
         Scanner s = new Scanner(System.in);
@@ -21,6 +12,15 @@ public class LargestInArray {
             input[i] = s.nextInt();
         }
         return input;
+    }
+    public static int largest(int input[]) {
+        int max = Integer.MIN_VALUE;
+        for (int i = 0; i < input.length ; i++) {
+            if (input[i] > max) {
+                max = input[i];
+            }
+        }
+        return max;
     }
     public static void Print(int input[]) {
         int size = input.length;
