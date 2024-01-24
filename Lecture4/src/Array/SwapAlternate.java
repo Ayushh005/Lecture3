@@ -18,13 +18,12 @@ public class SwapAlternate {
             input[i] = input[i+1];
             input[i+1] = temp;
         }
-        for (int i=0;i<=input.length;i++) {
-            System.out.println(input[i]+" ");
+        for (int i=0;i<input.length;i++) {
+            System.out.print(input[i]+" ");
         }
     }
     public static void main(String[] args) {
         int[] arr = input();
         Swap(arr);
-
     }
 }
