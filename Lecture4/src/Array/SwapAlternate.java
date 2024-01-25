@@ -5,9 +5,11 @@ import java.util.Scanner;
 public class SwapAlternate {
     public static int[] input() {
         Scanner s = new Scanner(System.in);
+        System.out.print("Enter size of Array:");
         int n = s.nextInt();
+        System.out.print("Enter element:");
         int input[] = new int[n];
-        for (int i=0;i<=n;i++) {
+        for (int i=0;i<n;i++) {
             input[i] = s.nextInt();
         }
         return input;
@@ -24,6 +26,7 @@ public class SwapAlternate {
     }
     public static void main(String[] args) {
         int[] arr = input();
+        System.out.print("Swapped array :");
         Swap(arr);
     }
 }
