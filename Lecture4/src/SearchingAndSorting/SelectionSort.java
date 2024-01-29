@@ -18,7 +18,9 @@ public class SelectionSort {
     }
     public static void main(String[] args) {
         int[] arr = {4,3,5,1,2,6,7};
+
         Sort(arr);
+        System.out.println("Sorted Array :");
         for (int i=0;i<arr.length;i++){
             System.out.print(arr[i]+" ");
         }
