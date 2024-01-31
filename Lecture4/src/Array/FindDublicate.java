@@ -13,7 +13,7 @@ public class FindDublicate {
 
     public static void main(String[] args) {
         int[] arr = {1, 2, 3, 5, 4, 4};
-        System.out.print("Dublicate element is : ");
+        System.out.print("Dublicate element: ");
         Dublicate(arr);
     }
 }
