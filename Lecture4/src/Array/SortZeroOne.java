@@ -11,13 +11,14 @@ class  SortZeroOne{
                 input[zero] = input[i];
                 input[i] = temp;
                 zero++;
-
             }
+        }
+        for (int i=0;i< input.length;i++) {
+            System.out.print(input[i]+" ");
         }
     }
     public static void main(String[] args) {
         int input[] = {0,0,1,0,1,1,0,1};
         SortArray(input);
-
     }
 }
