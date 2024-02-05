@@ -2,7 +2,7 @@ package Array;
 
 public class RotateArray {
     public static void Rotate(int[] arr,int d){
-        for (int i=0;i< arr.length;i++){
+        for (int i=d-1;i< arr.length;i++){
 
         }
     }
