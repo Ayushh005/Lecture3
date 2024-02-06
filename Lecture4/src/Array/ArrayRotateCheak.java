@@ -11,7 +11,7 @@ public class ArrayRotateCheak {
 // this is wrong code
     public static void main(String[] args) {
         int arr[] = {4,6,4,8,3,9,5};
-        int d = 3
+        int d = 3;
         Cheak(arr,d);
 
     }
