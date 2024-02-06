@@ -8,7 +8,7 @@ public class ArrayRotateCheak {
         }
         return 0;
     }
-//     XXXX Wrong code XXXX
+// this is wrong code
     public static void main(String[] args) {
         int arr[] = {4,6,4,8,3,9,5};
         int d = 3
