@@ -26,8 +26,14 @@ public class SortZeroOneTwo {
     }
     public static void main(String[] args) {
         int[] arr = {0,1,2,0,2,0,1};
+        System.out.println("Given Array :");
+        for (int i=0;i< arr.length;i++){
+            System.out.print(arr[i]+ " ");
+        }
+        System.out.println();
         sort(arr);
 
+        System.out.println("Sorted Array : ");
         for (int i=0;i< arr.length;i++){
             System.out.print(arr[i]+" ");
         }
