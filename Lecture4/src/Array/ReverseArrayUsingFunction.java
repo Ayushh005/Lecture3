@@ -6,16 +6,16 @@ public class ReverseArrayUsingFunction {
 
     public static void rotate(int[] arr){
         int n = arr.length;
-        int start = 1;
+        int start = 0;
         int last = n-1;
         for (int i=0;i< n;i++){
             while (start < last){
                 int temp = arr[start];
                 arr[start] = arr[last];
                 arr[last] = temp;
+                start++;
+                last--;
             }
-            start++;
-            last--;
         }
     }
 
