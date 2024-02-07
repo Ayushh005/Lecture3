@@ -13,18 +13,18 @@ public class PopulateArray {
 
     public static void arrange(int[] input) {
         int size = input.length; // Use the length of the provided array
-        int left = 0;
-        int right = size - 1;
+        int start = 0;
+        int end = size - 1;
         int counter = 1;
-        while (left <= right) {
+        while (start <= end) {
             if (counter % 2 == 0) {
-                input[left] = counter;
+                input[start] = counter;
                 counter += 1;
-                left += 1;
+                start += 1;
             } else {
-                input[right] = counter;
+                input[end] = counter;
                 counter += 1;
-                right -= 1;
+                end -= 1;
             }
         }
         for (int i = 0; i < input.length; i++) {
