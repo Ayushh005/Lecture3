@@ -32,6 +32,10 @@ public class SumOfTwoArrays {
             k--;
         }
         output[0] = carry;
+
+        for (int s=0;s< output.length;s++){
+            System.out.print(output[s] + " ");
+        }
     }
     public static void main(String[] args) {
         int[] arr1 = {4,6,4,8,3,9,5};
@@ -40,8 +44,6 @@ public class SumOfTwoArrays {
 
         Sum(arr1,arr2,output);
 
-        for (int i=0;i< args.length;i++){
-            System.out.println(output);
-        }
+
     }
 }
