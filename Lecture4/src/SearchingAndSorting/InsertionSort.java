@@ -2,7 +2,7 @@ package SearchingAndSorting;
 
 public class InsertionSort {
     public static void sort(int[] arr) {
-        for (int i = 0; i < arr.length; i++) {
+        for (int i = 1; i < arr.length; i++) {
             int j = i - 1;
             int temp = arr[i];
             while (j >= 0 && arr[j] > temp) {
