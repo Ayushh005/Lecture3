@@ -13,7 +13,7 @@ public class FibonacciNo {
             int c = a + b ;
             a = b;
             b = c;
-            System.out.println(a);
+            System.out.print(a+" ");
         }
     }
 }
