@@ -5,7 +5,7 @@ public class ReverseArray {
         int n = arr.length;
         int start = 0;
         int end = n-1;
-        for (int i=0;i<n;i++){
+       // for (int i=0;i<n;i++){
             while (start<end){
                 int temp = arr[start];
                 arr[start] = arr[end];
@@ -13,7 +13,7 @@ public class ReverseArray {
                 start++;
                 end--;
             }
-        }
+       // }
     }
     public static void main(String[] args) {
         int [] arr = new int[]{1,2,3,4,5};
