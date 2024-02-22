@@ -20,7 +20,7 @@ public class ElementAtleastOneGreater {
 
     public static void main(String[] args) {
         int[] arr = {3,4,11,8,2,10,9,11};
-        System.out.print("No. of Elements having atleast One greater then itself = ");
+        System.out.print("No. of  valid Elements having atleast One greater then itself = ");
         countGreater(arr);
     }
 }
