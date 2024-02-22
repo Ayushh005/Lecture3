@@ -20,9 +20,9 @@ public class PrintMN_NM {
         }
         System.out.println("Your Output is : ");
 
-        for (int j=0;j<n;j++){
-            for (int i=0;i<m;i++){
-                System.out.print(arr[i][j]+" ");
+        for (int i=0;i<n;i++){
+            for (int j=0;j<m;j++){
+                System.out.print(arr[j][i]+" ");
             }
             System.out.println();
         }
