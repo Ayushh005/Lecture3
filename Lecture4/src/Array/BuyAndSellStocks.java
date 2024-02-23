@@ -9,9 +9,9 @@ public class BuyAndSellStocks {
             if (buy > arr[i]) {
                 buy = arr[i];
             }
-            else{
+
                 profit = arr[i]-buy;
-            }
+
             if (profit>maxProfit){
                 maxProfit = profit;
             }
