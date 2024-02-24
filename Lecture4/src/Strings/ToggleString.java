@@ -3,31 +3,25 @@ package Strings;
 import java.util.Scanner;
 
 public class ToggleString {
-    public static void toggle(char[] ch){
-        for (int i = 0; i < ch.length; i++){
-            // Check if the character is uppercase
-            if (ch[i] >= 'A' && ch[i] <= 'Z'){
-                // Convert uppercase to lowercase by adding 32
+    public static void toggle(char[] ch) {
+        for (int i = 0; i < ch.length; i++) {
+            if (ch[i] >= 'A' && ch[i] <= 'Z') {
                 ch[i] = (char) (ch[i] + 32);
-            }
-            // Check if the character is lowercase
-            else if (ch[i] >= 'a' && ch[i] <= 'z') {
-                // Convert lowercase to uppercase by subtracting 32
+            } else if (ch[i] >= 'a' && ch[i] <= 'z') {
                 ch[i] = (char) (ch[i] - 32);
             }
-            // Ignore non-alphabetic characters
         }
     }
 
     public static void main(String[] args) {
         Scanner s = new Scanner(System.in);
-        System.out.println("Enter the length of the string:");
+        System.out.print("Enter the length of the string: ");
         int n = s.nextInt();
 
         // Consume the newline character left in the buffer
         s.nextLine();
 
-        System.out.println("Enter the string:");
+        System.out.print("Enter the string: ");
         String st = s.nextLine();
 
         char[] ch = new char[n];
@@ -37,7 +31,6 @@ public class ToggleString {
 
         toggle(ch);
 
-        // Print the toggled string
         System.out.println("Toggled String: " + new String(ch));
     }
 }
