@@ -12,7 +12,6 @@ public class ToggleString {
             }
         }
     }
-
     public static void main(String[] args) {
         Scanner s = new Scanner(System.in);
         System.out.print("Enter the length of the string: ");
