@@ -23,6 +23,7 @@ public class ToggleString {
         System.out.print("Enter the string: ");
         String st = s.nextLine();
 
+        // Convert string to array
         char[] ch = new char[n];
         for (int i = 0; i < n; i++){
             ch[i] = st.charAt(i);
