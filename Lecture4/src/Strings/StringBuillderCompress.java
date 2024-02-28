@@ -1,7 +1,7 @@
 package Strings;
 
 public class StringBuillderCompress {
-    public static String compress(String str) {
+    public static String compress(String str) {            // code is not optimized
         StringBuilder sb = new StringBuilder();
 
         for (int i = 0; i < str.length(); i++) {
@@ -23,7 +23,7 @@ public class StringBuillderCompress {
     }
 
     public static void main(String[] args) {
-        String str = "aaabbccdd";
+        String str = "jhhhaaahhg";
         System.out.println(compress(str));
     }
 }
