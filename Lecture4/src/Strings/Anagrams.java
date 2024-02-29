@@ -17,7 +17,7 @@ public class Anagrams {
             Arrays.sort(str2);
 
             boolean result = Arrays.equals(str1,str2);
-            if (result){
+            if (result){                   //  you can also write true insted of result.
                 System.out.println(s1 + " and " + s2 + " are anagram of each other.");
             }
             else {
