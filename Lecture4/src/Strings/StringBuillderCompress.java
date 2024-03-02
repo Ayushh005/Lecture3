@@ -1,7 +1,7 @@
 package Strings;
 
 public class StringBuillderCompress {
-    public static String compress(String str) {            // code is not optimized
+    public static String compress(String str) {
         StringBuilder sb = new StringBuilder();
 
         for (int i = 0; i < str.length(); i++) {
@@ -12,9 +12,7 @@ public class StringBuillderCompress {
                 count++;
                 i++;
             }
-
             sb.append(ch);
-
             if (count > 1) {
                 sb.append(count);
             }
