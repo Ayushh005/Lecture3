@@ -2,12 +2,12 @@ package Recursion;
 
 public class Factorial {
     public static int fact(int n){
-        if (n == 0){
+        if (n == 1){
             return 1;
         }
-        int fnm = fact(n-1);
-        int fn = n * fact(n-1);
-        return fn;
+        int temp = fact(n-1);
+
+        return n * temp;
     }
     public static void main(String[] args) {
         int n = 5;
