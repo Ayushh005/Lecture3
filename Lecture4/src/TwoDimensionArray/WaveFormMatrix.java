@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class WaveFormMatrix {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) {             //   solve the error
         Scanner s = new Scanner(System.in);
         int m = s.nextInt();
         int n = s.nextInt();
@@ -29,4 +29,6 @@ public class WaveFormMatrix {
             }
         }
     }
+
+    
 }
