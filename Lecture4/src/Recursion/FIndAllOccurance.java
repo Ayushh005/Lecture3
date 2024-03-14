@@ -6,7 +6,7 @@ public class FIndAllOccurance {
             return;
         }
         if (arr[i] == key){
-            System.out.print(i+" ");;
+            System.out.print(i+" ");
         }
         findOccurance(arr,key,i+1);
     }
