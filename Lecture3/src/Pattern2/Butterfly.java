@@ -19,7 +19,7 @@ public class Butterfly {
             System.out.println();
         }
         // second half
-        for (i=n;i>=1;i--){                          //  for reverse star printing
+        for (i=n-1;i>=1;i--){                          //  for reverse star printing
             for (j=1;j<=i;j++){
                 System.out.print("*");
             }
