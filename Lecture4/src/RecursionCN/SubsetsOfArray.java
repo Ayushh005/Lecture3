@@ -1,7 +1,7 @@
 package RecursionCN;
 
 public class SubsetsOfArray {
-    public static int[][] subsetHelper(int[] arr, int startIndex){               //  error
+    public static int[][] subsetHelper(int[] arr, int startIndex){
         // Base case: If the startIndex is equal to the length of the array,
         // return an array with an empty subset.
         if (startIndex == arr.length){
