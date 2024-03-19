@@ -16,7 +16,7 @@ public class ReverseSentence {
         return ans;
     }
     public static void main(String[] args) {
-        String str = "I am Ayush Sarraf";
+        String str = "This is Ayush Sarraf";
         System.out.println(reverse(str));
     }
 }
