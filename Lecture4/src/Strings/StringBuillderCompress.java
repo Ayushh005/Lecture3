@@ -25,3 +25,28 @@ public class StringBuillderCompress {
         System.out.println(compress(str));
     }
 }
+
+
+
+
+
+//    StringBuilder output = new StringBuilder();
+//    int count = 1;
+//        for (int i = 1; i < str.length(); i++) {
+//        if (str.charAt(i) == str.charAt(i-1)) {
+//        count++;
+//        } else {
+//        output.append(str.charAt(i - 1));
+//        if (count > 1) {
+//        output.append(count);
+//        }
+//        count = 1;
+//        }
+//        }
+//        output.append(str.charAt(str.length() - 1));
+//        if (count > 1) {
+//        output.append(count);
+//        }
+//
+//        return output.toString();
+//        }
