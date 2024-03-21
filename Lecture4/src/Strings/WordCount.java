@@ -16,7 +16,7 @@ public class WordCount {
     }
     public static void main(String[] args) {
         String s = "Coding Ninjas!";
-        System.out.printf("Word Count : ");
+        System.out.print("Word Count : ");
         System.out.println(print(s));
     }
 }
