@@ -11,10 +11,12 @@ public class WordCount {
                 spaces++;
             }
         }
-        return spaces+1;
+        int words = spaces + 1;
+        return words;
     }
     public static void main(String[] args) {
         String s = "Coding Ninjas!";
+        System.out.printf("Word Count : ");
         System.out.println(print(s));
     }
 }
