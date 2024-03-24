@@ -62,7 +62,7 @@ public class DiagonalAndBoundarySum{
                 arr[i][j] = s.nextInt();
             }
         }
-        System.out.print("Sum : ");
+        System.out.print("Sum of Diagonal and Boundary : ");
         totalSum(arr);
     }
 }
