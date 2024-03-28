@@ -3,8 +3,8 @@ package TwoDimensionArray;
 import java.util.Scanner;
 
 public class Basics {
-    public static void main(String[] args) {
-        Scanner s = new Scanner(System.in);
+    public static void main(String[] args) {              //  column run vertical
+        Scanner s = new Scanner(System.in);               //  row run horizontal
         int r = s.nextInt();
         int c = s.nextInt();
 
