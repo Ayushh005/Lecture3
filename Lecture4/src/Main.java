@@ -3,17 +3,19 @@
 import java.util.Scanner;
 
 public class Main {
-    public static String removeDuplicate(String str){
-        int n = str.length();
-        if (n==0){
-            return str;
-        }
+    public static String removeDuplicate(String str) {
         StringBuilder sb = new StringBuilder();
-        sb.append(str.charAt(0));
 
-        for (int i=1;i<n;i++){
-            if (str.charAt(i) != str.charAt(i-1)) {
-                sb.append(str.charAt(i));
+        for (int i=0;i<str.length();i++){
+            char ch = str.charAt(i);
+            int count = 1;
+            if (i<str.length()-1 && str.charAt(i) == str.charAt(i+1)){
+                count++;
+                i++;
+            }
+            sb.append(ch);
+            if (count > 1) {
+                sb.append(count);
             }
         }
         return sb.toString();
