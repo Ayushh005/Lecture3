@@ -3,26 +3,24 @@
 import java.util.Scanner;
 
 public class Main {
-    public static void profit(int[] arr){
-        int n = arr.length;
-        int buy = Integer.MAX_VALUE;
-        int profit = 0;
-        int maxProfit = 0;
-        for (int i=0;i<n;i++){
-            if (buy > arr[i]){
-                buy = arr[i];
-            }
-            profit = arr[i] - buy;
-            if (maxProfit < profit) {
-                maxProfit = profit;
+    public static String removeDuplicate(String str){
+        int n = str.length();
+        if (n==0){
+            return str;
+        }
+        StringBuilder sb = new StringBuilder();
+        sb.append(str.charAt(0));
+
+        for (int i=1;i<n;i++){
+            if (str.charAt(i) != str.charAt(i-1)) {
+                sb.append(str.charAt(i));
             }
         }
-        System.out.println(maxProfit);
+        return sb.toString();
     }
     public static void main(String[] args) {
-        int[] arr = {44,30,24,32,35,30,40,38,15};
-
-        profit(arr);
+        String str = "aabbbcddeeefggh";
+        System.out.println(removeDuplicate(str));
     }
 }
 
