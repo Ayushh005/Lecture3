@@ -1,28 +1,38 @@
 
 
+import java.awt.desktop.SystemSleepEvent;
 import java.util.Scanner;
 
 public class Main {
-    public static int profit(int[] arr) {
-        int buy = Integer.MAX_VALUE;
-        int profit = 0;
-        int maxProfit = 0;
-
-        for (int i=0;i< arr.length;i++){
-            if (arr[i] < buy){
-                buy = arr[i];
+    public static int[] ans(int[] arr) {
+        int n = arr.length;
+        int start = 0;
+        int last = n-1;
+        int counter = 1;
+        while (start <= last) {
+            if (counter % 2 == 0) {
+                arr[start] = counter;
+                start++;
+                counter++;
             }
-            profit = arr[i] - buy;
-            if (maxProfit < profit) {
-                maxProfit = profit;
+            else {
+                arr[last] = counter;
+                last--;
+                counter++;
             }
         }
-        return maxProfit;
+        System.out.println("Array elements:");
+        for (int i = 1; i < n; i++) {
+            System.out.print(arr[i] + " ");
+        }
+        return arr;
     }
     public static void main(String[] args) {
-        int[] arr = {44,30,24,32,35,30,40,38,15};
-        System.out.print("maximum profit : ");
-        System.out.println(profit(arr));
+        Scanner s = new Scanner(System.in);
+        int size = s.nextInt();
+        int[] arr = new int[size];
+        ans(arr);
+
     }
 }
 
