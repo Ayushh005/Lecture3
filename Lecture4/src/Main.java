@@ -4,11 +4,15 @@ import java.awt.desktop.SystemSleepEvent;
 import java.util.Scanner;
 
 public class Main {
-    public static String removeChar(String str, char ch){
-        StringBuilder ans = new StringBuilder();
+    public static String removeChar(String str){
         int n = str.length();
-        for (int i=0;i<n;i++){
-            if (str.charAt(i) != 'a'){
+        if (n == 0)  return str;
+
+        StringBuilder ans = new StringBuilder();
+        ans.append(str.charAt(0));
+
+        for (int i=1;i<n;i++){
+            if (str.charAt(i) != str.charAt(i-1)){
                 ans.append(str.charAt(i));
             }
         }
@@ -16,9 +20,8 @@ public class Main {
     }
 
     public static void main(String[] args) {
-        String str = "america";
-        char ch = 'a';
-        System.out.println(removeChar(str,ch));
+        String str = "aabbbcddeeefggh";
+        System.out.println(removeChar(str));
     }
 }
 
