@@ -8,7 +8,7 @@ public class StringBuillderCompress {
             char ch = str.charAt(i);
             int count = 1;
 
-            while (i < str.length() - 1 && str.charAt(i) == str.charAt(i + 1)) {    // instead of while we also use if condition
+            while (i < str.length() - 1 && str.charAt(i) == str.charAt(i + 1)) {    // if is used for conditional execution based on a single condition, while while is used for repeated execution based on a condition that may change during each iteration. In your code, if is used to handle immediate consecutive characters, while while is used to handle cases where there are more than two consecutive characters
                 count++;
                 i++;
             }
