@@ -2,29 +2,18 @@ import java.awt.desktop.SystemSleepEvent;
 import java.util.Scanner;
 
 public class Main {
-    public static String compress(String str){
-        int n = str.length();
-        if (n == 0)  return str;
-
-        StringBuilder ans = new StringBuilder();
-
+    public static int compress(String str){
+        int count = 0;
         for (int i=0;i<str.length();i++){
-            char ch = str.charAt(i);
-            int count = 1;
-            while (i < str.length()-1 && str.charAt(i) == str.charAt(i+1)){
+            if (str.charAt(i) != ' '){
                 count++;
-                i++;
-            }
-            ans.append(ch);
-            if (count > 1) {
-                ans.append(count);
             }
         }
-        return ans.toString();
+        return count;
     }
 
     public static void main(String[] args) {
-        String str = "aabbbcddeeefggh";
+        String str = "i am the best in this entire world";
         System.out.println(compress(str));
     }
 }
