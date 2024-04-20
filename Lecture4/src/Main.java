@@ -12,7 +12,7 @@ public class Main {
     }
 
     public static void main(String[] args) {
-        String str = "i am the best in this entire world";
+        String str = "i am the best in this entire world.";
         System.out.println(count(str));
     }
 }
