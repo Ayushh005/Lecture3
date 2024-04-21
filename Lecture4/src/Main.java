@@ -2,17 +2,18 @@ import java.awt.desktop.SystemSleepEvent;
 import java.util.Scanner;
 
 public class Main {
-    public static int count(String str){
-        int i = 0;
-        int count = 0;
-        while (i<str.length() && str.length() != ' '){
-            count++;
+    public static int fibonacci(int n){
+        if (n==0 || n==1){
+            return n;
         }
-        return count;
+        int ans = fibonacci(n-1) + fibonacci(n-2);
+
+        return ans;
     }
 
     public static void main(String[] args) {
-        String str = "i am the best in this entire world.";
-        System.out.println(count(str));
+        Scanner s = new Scanner(System.in);
+        int n = s.nextInt();
+        System.out.println(fibonacci(n));
     }
 }
