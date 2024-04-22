@@ -12,6 +12,7 @@ public class Main {
     }
 
     public static void main(String[] args) {
+        System.out.println("Enter an Integer : ");
         Scanner s = new Scanner(System.in);
         int n = s.nextInt();
         System.out.println(fibonacci(n));
