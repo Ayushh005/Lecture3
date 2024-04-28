@@ -1,7 +1,10 @@
 package RecursionCN;
 
 public class CheakSortedArray {
-    public static boolean isSorted(int[] arr,int startIndex){
+    public static boolean isSorted(int[] arr){
+        return isSorted(arr,0);
+    }
+    private static boolean isSorted(int[] arr,int startIndex){
         if (startIndex >= arr.length-1) {
             return true;
         }
@@ -13,6 +16,6 @@ public class CheakSortedArray {
     }
     public static void main(String[] args) {
         int[] arr = {1,3,4,2,6,7,9};
-        System.out.println(isSorted(arr,0));
+        System.out.println(isSorted(arr));
     }
 }
