@@ -2,18 +2,19 @@ import java.awt.desktop.SystemSleepEvent;
 import java.util.Scanner;
 
 public class Main {
-    public static int fibonacci(int n){
-        if (n == 0){
-            return 0;
+    public static int sum(int arr[],int startIndex,int x){
+        if (startIndex == arr.length) {
+            return -1;
         }
-        int ans = fibonacci(n/10);
-        return ans+1;
+        if (arr[startIndex] == x) {
+            return startIndex;
+        }
+        return sum(arr,startIndex+1,x);
     }
 
     public static void main(String[] args) {
-        System.out.println("Enter an Integer : ");
-        Scanner s = new Scanner(System.in);
-        int n = s.nextInt();
-        System.out.println(fibonacci(n));
+        int[] arr = {4,5,9,7,6,3,5,6};
+        int x = 6;
+        System.out.println(sum(arr,0,x));
     }
 }
