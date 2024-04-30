@@ -22,7 +22,7 @@ public class Main {
     }
     public static void main(String[] args) {
         int[] arr = {10,8,9,8,5,6,4,3,8};
-        int x = 8;
+        int x = 5;
         System.out.println(search(arr,x,0));
     }
 }
