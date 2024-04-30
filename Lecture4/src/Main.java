@@ -9,13 +9,19 @@ public class Main {
         if (startIndex == arr.length) {
             return -1;
         }
+        int ans = search(arr,x,startIndex + 1);
+        if (ans != -1) {
+            return ans;
+        }
         if (arr[startIndex] == x) {
             return startIndex;
         }
-        return search(arr, x,startIndex + 1);
+        else {
+            return -1;
+        }
     }
     public static void main(String[] args) {
-        int[] arr = {10,8,9,8,5,6,4,3};
+        int[] arr = {10,8,9,8,5,6,4,3,8};
         int x = 8;
         System.out.println(search(arr,x,0));
     }
