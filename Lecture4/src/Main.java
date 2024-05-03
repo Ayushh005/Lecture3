@@ -2,27 +2,30 @@ import java.awt.desktop.SystemSleepEvent;
 import java.util.Scanner;
 
 public class Main {
-    public static int search(int[] arr,int x){
-        return search(arr,x,0);
-    }
-    private static int search(int[] arr,int x,int startIndex){
+
+    private static int[] search(int[] arr,int x,int startIndex){
         if (startIndex == arr.length) {
-            return -1;
+            return new int[0];
         }
-        int ans = search(arr,x,startIndex + 1);
-        if (ans != -1) {
-            return ans;
-        }
+        int smallAns[] = search(arr,x,startIndex+1);
+
         if (arr[startIndex] == x) {
-            return startIndex;
-        }
-        else {
-            return -1;
+            int[] ans = new int[smallAns.length + 1];
+            ans[0] = startIndex;
+            for (int i=0;i< smallAns.length;i++){
+                ans[i+1] = smallAns[i];
+            }
+            return ans;
+        }else{
+            return smallAns;
         }
     }
     public static void main(String[] args) {
         int[] arr = {10,8,9,8,5,6,4,3,8};
         int x = 12;
-        System.out.println(search(arr,x,0));
+        int[] ans = search(arr,8,0);
+        for (int i : ans) {
+            System.out.print(i + " ");
+        }
     }
 }
