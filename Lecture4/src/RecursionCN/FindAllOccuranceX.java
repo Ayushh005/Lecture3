@@ -19,7 +19,7 @@ public class FindAllOccuranceX {
         }
     }
     public static void main(String[] args) {
-        int[] arr = {10,8,9,8,5,6,4,3,8};
+        int[] arr = {10,8,9,8,5,6,4,3,8,4};
         int x = 8;
         int[] ans = find(arr,8,0);
         for (int i : ans) {
