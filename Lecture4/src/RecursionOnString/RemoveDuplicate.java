@@ -8,10 +8,8 @@ public class RemoveDuplicate {
         if (str.charAt(0) == str.charAt(1)){
             return remove(str.substring(1));
         }
-        else {
             String smallAns = remove(str.substring(1));
             return str.charAt(0) + smallAns;
-        }
     }
     public static void main(String[] args) {
         String str = "xxxyyyzwwzzz";
