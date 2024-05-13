@@ -1,18 +1,20 @@
 import java.util.Scanner;
 
 public class Main {
-    public static String remove(String str){
-        if (str.length() <= 1){
-            return str;
+    public static boolean check(String str, int s, int e) {
+        if (s >= e) {
+            return true;
         }
-        if (str.charAt(0) == str.charAt(1)){
-            return remove(str.substring(1));
+        if (str.charAt(s) != str.charAt(e - 1)) {
+            return false;
         }
-        String ans = remove(str.substring(1));
-        return str.charAt(0) + ans;
+        return check(str, s + 1, e - 1);
     }
+
     public static void main(String[] args) {
-        String str = "aaabbcddeee";
-        System.out.println(remove(str));
+        String str = "racecare";
+        int s = 0; // Start from index 0
+        int e = str.length() - 1; // Index of the last character
+        System.out.println(check(str, s, e) ? "Not a Palindrome" : "palindrome");
     }
 }
