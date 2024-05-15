@@ -12,7 +12,7 @@ public class Main {
     }
 
     public static void main(String[] args) {
-        String str = "racecare";
+        String str = "racecar";
         int s = 0; // Start from index 0
         int e = str.length() - 1; // Index of the last character
         System.out.println(check(str, s, e) ? "Not a Palindrome" : "palindrome");
