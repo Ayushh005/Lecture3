@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Main {
+public class MergeSort {
     public static void mergeSort(int[] input){
         if (input.length <= 1){
             return;
