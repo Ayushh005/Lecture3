@@ -1,51 +1,56 @@
-
+package SearchingAndSorting;
 
 public class Main {
+    public static int partition(int[] arr, int si, int ei) {
+        int pivot = arr[si];
+        int count = 0;
+        for (int i = si + 1; i <= ei; i++) {
+            if (arr[i] <= pivot) {
+                count++;
+            }
+        }
+        int pivotIndex = si + count;
+        int temp = arr[pivotIndex];
+        arr[pivotIndex] = arr[si];
+        arr[si] = temp;
 
-    public static void mergeSort(int[] arr){
-        if (arr.length <= 1){
+        int i = si, j = ei;
+        while (i < pivotIndex && j > pivotIndex) {
+            while (arr[i] <= pivot) {
+                i++;
+            }
+            while (arr[j] > pivot) {
+                j--;
+            }
+            if (i < pivotIndex && j > pivotIndex) {
+                temp = arr[i];
+                arr[i] = arr[j];
+                arr[j] = temp;
+                i++;
+                j--;
+            }
+        }
+        return pivotIndex;
+    }
+
+    public static void quickSort(int[] arr, int si, int ei) {
+        if (si >= ei) {
             return;
         }
-        int mid = arr.length/2;
-        int[] a = new int[mid];
-        int[] b = new int[arr.length - mid];
-        for (int i=0;i<mid;i++){
-            a[i] = arr[i];
-        }
-        for (int i=mid;i< arr.length;i++){
-            b[i-mid] = arr[i];
-        }
-        mergeSort(a);
-        mergeSort(b);
-        merge(arr,a,b);
-
+        int partitionIndex = partition(arr, si, ei);
+        quickSort(arr, si, partitionIndex - 1);
+        quickSort(arr, partitionIndex + 1, ei);  // Corrected to exclude pivotIndex
     }
-    public static void merge(int[] output,int[] a ,int[] b){
-        int i=0,j=0,k=0;
-        while(i<a.length && j<b.length){
-            if (a[i] < b[j]){
-                output[k] = a[i];
-                i++;k++;
-            }else {
-                output[k] = b[j];
-                j++;k++;
-            }
-            while (i < a.length) {
-                output[k] = a[i];
-                i++;k++;
-            }
-            while (j < b.length) {
-                output[k] = b[j];
-                j++;k++;
-            }
-        }
+
+    public static void quickSort(int[] arr) {
+        quickSort(arr, 0, arr.length - 1);
     }
 
     public static void main(String[] args) {
-        int[] arr = {3, 6, 8, 7, 9, 4, 1, 5 };
-        mergeSort(arr);
-        for(int num : arr) {
-            System.out.print(num + " ");
+        int[] arr = {4, 9, 7, 8, 6, 3, 2, 1};
+        quickSort(arr);
+        for (int i : arr) {
+            System.out.print(i + " ");
         }
     }
 }
