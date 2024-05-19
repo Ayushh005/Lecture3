@@ -1,31 +1,31 @@
 package SearchingAndSorting;
 
 public class QuickSort {
-    public static int partition(int[] arr,int si,int ei){
+    public static int partition(int[] arr,int si,int ei) {
         int pivot = arr[si];
         int count = 0;
-        for (int i=si;i<=ei;i++) {
+        for (int i=si+1;i<arr.length;i++){
             if (arr[i] <= pivot) {
                 count++;
             }
         }
-        int pivotIndex = count + si ;
-        arr[si] = arr[pivotIndex];
-        arr[pivotIndex] = pivot;
+        int pivotIndex = si + count;
+        int temp = arr[pivotIndex];
+        arr[pivotIndex] = arr[si];
+        arr[si] = temp;
 
         int i=si,j=ei;
-        while (i < j) {
-            while (i <= ei && arr[i] <= pivot) {
+        while (i < pivotIndex && j > pivotIndex) {
+            while (arr[i] < pivot) {
                 i++;
             }
-            while (arr[j] > pivot){
+            while (arr[j] > pivot) {
                 j--;
             }
-            if (i <= j) {
-                int temp = arr[i];
+            if (i < pivotIndex && j > pivotIndex) {
+                temp = arr[i];
                 arr[i] = arr[j];
                 arr[j] = temp;
-                i++;j++;
             }
         }
         return pivotIndex;
@@ -36,14 +36,17 @@ public class QuickSort {
         }
         int partitionIndex = partition(arr,si,ei);
         quickSort(arr,si,partitionIndex-1);
-        quickSort(arr,partitionIndex,ei);
-
+        quickSort(arr,partitionIndex+1,ei);
     }
     public static void quickSort(int[] arr){
         quickSort(arr,0, arr.length-1);
     }
+
     public static void main(String[] args) {
         int[] arr = {4,9,7,8,6,3,2,1};
         quickSort(arr);
+        for (int i : arr){
+            System.out.print(i + " ");
+        }
     }
 }
