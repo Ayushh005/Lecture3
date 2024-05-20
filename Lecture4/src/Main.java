@@ -1,56 +1,20 @@
-package SearchingAndSorting;
-
 public class Main {
-    public static int partition(int[] arr, int si, int ei) {
-        int pivot = arr[si];
-        int count = 0;
-        for (int i = si + 1; i <= ei; i++) {
-            if (arr[i] <= pivot) {
-                count++;
-            }
+    public static String replace(String str){
+        if (str.length() <= 1) {
+            return str;
         }
-        int pivotIndex = si + count;
-        int temp = arr[pivotIndex];
-        arr[pivotIndex] = arr[si];
-        arr[si] = temp;
-
-        int i = si, j = ei;
-        while (i < pivotIndex && j > pivotIndex) {
-            while (arr[i] <= pivot) {
-                i++;
-            }
-            while (arr[j] > pivot) {
-                j--;
-            }
-            if (i < pivotIndex && j > pivotIndex) {
-                temp = arr[i];
-                arr[i] = arr[j];
-                arr[j] = temp;
-                i++;
-                j--;
-            }
+        String output;
+        String ans = replace(str.substring(1));
+        if (str.charAt(0) == 'p' && str.charAt(1) == 'i'){
+            output = "3.14" + ans.substring(1);
         }
-        return pivotIndex;
-    }
-
-    public static void quickSort(int[] arr, int si, int ei) {
-        if (si >= ei) {
-            return;
+        else {
+            output = str.charAt(0) + ans;
         }
-        int partitionIndex = partition(arr, si, ei);
-        quickSort(arr, si, partitionIndex - 1);
-        quickSort(arr, partitionIndex + 1, ei);  // Corrected to exclude pivotIndex
+        return output;
     }
-
-    public static void quickSort(int[] arr) {
-        quickSort(arr, 0, arr.length - 1);
-    }
-
     public static void main(String[] args) {
-        int[] arr = {4, 9, 7, 8, 6, 3, 2, 1};
-        quickSort(arr);
-        for (int i : arr) {
-            System.out.print(i + " ");
-        }
+        String str = "xpix";
+        System.out.println(replace(str));
     }
 }
